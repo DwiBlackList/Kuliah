@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 70%;
+        }
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #ccc;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0px;
+        }
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+        }
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        @media (max-width: 600px){
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Bahasa Pemograman</h2>
+    <p>Bahasa pemrograman merupakan untaian kata-kata berupa instruksi atau perintah-perintah yang biasanya terdiri dari banyak baris yang bisa dimengerti oleh komputer. </p>
+    <p>Bahasa pemrograman ini wajib dikuasai oleh seorang developer agar dapat membangun sebuah aplikasi atau software.</p>
+
+    <header>
+        <h2>Bahasa Pemograman</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Bahasa C</a></li>
+                <li><a href="#">PHP</a></li>
+            </ul>
+        </nav>
+        
+        <article>
+            <h1>Java</h1>
+            <p>Java adalah bahasa pemrograman yang dapat dijalankan di berbagai platform, dari mulai PC sampai perangkat mobile.</p>
+            <p>Bahasa pemrograman ini awalnya dikembangkan pada The Green Project pada tahun 1991 ole Sun Microsystem yang kemudian dilepas pada Oracle</p>
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

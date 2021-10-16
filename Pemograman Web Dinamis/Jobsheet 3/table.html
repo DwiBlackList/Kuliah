@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        #mahasiswa {
+            font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #mahasiswa td , #mahasiswa tr {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-family: cursive;
+        }
+        #mahasiswa tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        #mahasiswa tr:hover {
+            background-color: #ddd;
+        }
+        #mahasiswa th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: salmon;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table id="mahasiswa">
+        <tr>
+            <th>Nama</th>
+            <th>Jurusan</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+        <tr>
+            <td>Ferry</td>
+            <td>Teknik Informatika</td>
+            <td>Laki-Laki</td>
+        </tr>
+        <tr>
+            <td>Benny</td>
+            <td>Teknik Elektro</td>
+            <td>Laki-Laki</td>
+        </tr>
+        <tr>
+            <td>Yunita</td>
+            <td>Teknik Telekomunikasi</td>
+            <td>Wanita</td>
+        </tr>
+        <tr>
+            <td>Yossi</td>
+            <td>Teknik Elektro</td>
+            <td>Laki-Laki</td>
+        </tr>
+        <tr>
+            <td>Farrah</td>
+            <td>Teknik Informatika</td>
+            <td>Wanita</td>
+        </tr>
+        <tr>
+            <td>Lisa</td>
+            <td>Teknik Informatika</td>
+            <td>Wanita</td>
+        </tr>
+    </table>
+</body>
+</html>
