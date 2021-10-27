@@ -1,6 +1,10 @@
 # File Mata Kuliah Pemograman Web Dinamis <br> By : Ichsanul Dwi Prayitno kelas : TI-2A
 
 Change Log :
+<h3> 27 - Oktober - 2021 </h3>
+<li> Mengupload Job Sheet 4 </li>
+<li> Mengedit Index.php ; hal yang dilakukan : 1.Mengatur Navigasi Job Sheet 4. 2.Membuat Margin antara dropdowns</li>
+
 <h3> 16 - Oktober - 2021 </h3>
 <li> Mengupload Job Sheet 3 </li>
 <li> Mengupload sebuah gambar bunga (bunga.jpg) pada folder img untuk digunakan dalam jobsheet 3 </li>
