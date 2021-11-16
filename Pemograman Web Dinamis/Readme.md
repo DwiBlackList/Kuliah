@@ -1,8 +1,14 @@
 # File Mata Kuliah Pemograman Web Dinamis <br> By : Ichsanul Dwi Prayitno kelas : TI-2A
 
-Note Of Today : Entah ~
+Note Of Today : Ty Kepada Marcellinus yang membantu Jobsheet 6
+
+Pingin ganti index.php biar lebih friendly
 
 Change Log :
+<h3> 16 - November - 2021 </h3>
+<li> Mengupload Job Sheet 6 </li>
+<li> Mengedit Index.php ; hal yang dilakukan : 1.Mengatur Navigasi Job Sheet 6</li>
+
 <h3> 7 - November - 2021 </h3>
 <li> Mengupload Job Sheet 5 </li>
 <li> Mengedit Index.php ; hal yang dilakukan : 1.Mengatur Navigasi Job Sheet 5</li>
