@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="cek_tgl2.php" method="get">
+    <form action="10_5_cek-tgl2.php" method="get">
         Tanggal lahir 
         <select name="tanggal" id="">
             Tanggal : 
@@ -35,8 +35,8 @@
         <select name="tahun" id="">
             <?php
                 $sekarang = (integer) date("Y");
-                for ($i=$sekarang; $i < ($sekarang - 120); $i--) { 
-                    print ("<option value='$i'>$i</option>");
+                for ($i = $sekarang; $i > ($sekarang - 120); $i--) { 
+                    echo"<option value='$i'>$i</option>";
                 }
             ?>
         </select>
