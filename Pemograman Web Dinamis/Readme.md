@@ -8,7 +8,7 @@ Pingin ganti index.php biar lebih friendly
 
 Change Log :
 <h3> 26 - November - 2021 </h3>
-<li> Memperbaiki Error Pada Job Sheet 8 - 11 ; File yang diperbaiki : 1. 10_2_tampil-hari-tanggal.php , 2. 10_4_countdown.php , 3. 10_5_cek-tgl1.php </li>
+<li> Memperbaiki Error Pada Job Sheet 8 - 11 ; File yang diperbaiki : 1. 10_2_tampil-hari-tanggal.php , 2. 10_4_countdown.php , 3. 10_5_cek-tgl1.php , 4. 8_3_ekspresi-reguler , 5. 11_1_halaman1.php , 6. 11_3_halaman3.php </li>
 
 <h3> 23 - November - 2021 </h3>
 <li> Mengupload Job Sheet 7 </li>
