@@ -4,7 +4,12 @@ Note Of Today : Pingin .......
 
 Pingin ganti index.php biar lebih friendly
 
+# Jika Terdapat Error Segara Hubungi +62 813 9139 6149
+
 Change Log :
+<h3> 26 - November - 2021 </h3>
+<li> Memperbaiki Error Pada Job Sheet 8 - 11 ; File yang diperbaiki : 1. 10_2_tampil-hari-tanggal.php , 2. 10_4_countdown.php , 3. 10_5_cek-tgl1.php </li>
+
 <h3> 23 - November - 2021 </h3>
 <li> Mengupload Job Sheet 7 </li>
 <li> Mengupload Job Sheet Gabungan 8 - 11 </li>
