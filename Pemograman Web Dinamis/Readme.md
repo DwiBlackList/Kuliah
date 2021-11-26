@@ -1,8 +1,8 @@
 # File Mata Kuliah Pemograman Web Dinamis <br> By : Ichsanul Dwi Prayitno kelas : TI-2A
 
-Note Of Today : Pingin .......
+Note Of Today : Mau En...
 
-Pingin ganti index.php biar lebih friendly
+<a href="https://ichsanuldwiprayitno.000webhostapp.com/" target="_blank">Preview Hasil Code Online</a>
 
 # Jika Terdapat Error Segara Hubungi +62 813 9139 6149
 
