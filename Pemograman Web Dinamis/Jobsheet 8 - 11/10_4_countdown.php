@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        date_default_timezone_get(Asia/Jakarta);
+        date_default_timezone_set("Asia/Jakarta");
         $batas_pembayaran = strtotime("14 November 2020 12:16:54 +1 days");   
         $waktu_saat_ini = strtotime("now");
         $selisih = $batas_pembayaran - $waktu_saat_ini ;
