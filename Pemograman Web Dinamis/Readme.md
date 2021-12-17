@@ -7,6 +7,9 @@ Note Of Today : Mau En...
 # Jika Terdapat Error Segara Hubungi +62 813 9139 6149
 
 Change Log :
+<h3> 6 - Desember - 2021 </h3>
+<li> Mengupload Job Sheet 12 - 13 </li>
+
 <h3> 26 - November - 2021 </h3>
 <li> Memperbaiki Error Pada Job Sheet 8 - 11 ; File yang diperbaiki : 1. 10_2_tampil-hari-tanggal.php , 2. 10_4_countdown.php , 3. 10_5_cek-tgl1.php , 4. 8_3_ekspresi-reguler , 5. 11_1_halaman1.php , 6. 11_3_halaman3.php </li>
 
