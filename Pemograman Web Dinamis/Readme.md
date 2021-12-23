@@ -7,6 +7,9 @@ Note Of Today : Mau En...
 # Jika Terdapat Error Segara Hubungi +62 813 9139 6149
 
 Change Log :
+<h3> 23 - Desember - 2021 </h3>
+<li> Mengupload Job Sheet 14 </li>
+
 <h3> 6 - Desember - 2021 </h3>
 <li> Mengupload Job Sheet 12 - 13 </li>
 
