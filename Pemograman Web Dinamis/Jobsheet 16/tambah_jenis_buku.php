@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Jenis Buku</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body {
+            background-color: black;
+            color : white;
+        }
+    </style>
 </head>
 <body>
+    <div class="container p-5">
     <h1>Tambah Jenis Buku</h1>
     <?php
         include "config.php";
@@ -14,21 +27,22 @@
     ?>
 
     <form action="simpan_data_jenis_buku.php" method="post">
-        <table border="1">
+        <table class="table table-bordered table-hover table-dark">
             <tr>
                 <td>Kode Jenis Buku</td>
                 <td>:</td>
-                <td><input type="text" name="kode_jenis_buku"></td>
+                <td><input type="text" name="kode_jenis_buku" class="form-control" placeholder="Masukkan Kode Jenis Buku"></td>
             </tr>
             <tr>
                 <td>Nama Jenis Buku</td>
                 <td>:</td>
-                <td><input type="text" name="nama_jenis_buku"></td>
+                <td><input type="text" name="nama_jenis_buku" class="form-control" placeholder="Masukkan Nama Jenis Buku"></td>
             </tr>
             <tr>
-                <td colspan="3"><input type="submit" value="SIMPAN"></td>
+                <td colspan="3"><div class="d-grid"><input type="submit" value="SIMPAN" class="btn btn-outline-success"></div></td>
             </tr>
         </table>
     </form>
+    </div>
 </body>
 </html>

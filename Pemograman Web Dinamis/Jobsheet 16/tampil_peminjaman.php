@@ -5,14 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body {
+            background-color: black;
+            color : white;
+        }
+        a {
+            color : white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="container p-5">
     <?php 
         include "config.php";
         $db = new Database();
     ?>
-    <a href="peminjaman_buku.php"><button>Tambah</button></a>
-    <table border="1">
+    <a href="peminjaman_buku.php"><button class="btn btn-success" style="margin-bottom: 10px;">Tambah</button></a>
+    <table class="table table-dark table-hover table-bordered">
         <tr>
             <th>No</th>
             <th>Judul Buku</th>
@@ -67,5 +84,6 @@
             }
         ?>
     </table>
+    </div>
 </body>
 </html>
