@@ -10,6 +10,7 @@ Change Log :
 
 <h3> 19 - Januari - 2022 </h3>
 <li> Mengupload Job Sheet 17 </li>
+<li> Reuploading Job Sheet 15 & 16 ; Hal yang dilakukan : Menambah Styling pada FrontEnd </li>
 
 <h3> 9 - Januari - 2022 </h3>
 <li> Mengupload Job Sheet 16 </li>
