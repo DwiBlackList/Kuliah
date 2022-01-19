@@ -1,6 +1,6 @@
 # File Mata Kuliah Pemograman Web Dinamis <br> By : Ichsanul Dwi Prayitno kelas : TI-2A
 
-Note Of Today : Mau En...
+Note Of Today : Lonely
 
 <a href="https://ichsanuldwiprayitno.000webhostapp.com/" target="_blank">Preview Hasil Code Online</a>
 
