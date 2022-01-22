@@ -1,153 +1,85 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Peminjam</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-class database
-{
-    var $host = "localhost";
-    var $username = "root";
-    var $password = "";
-    var $database = "sewa_buku";
-    var $koneksi = "";
-
-    function __construct()
-    {
-        $this->koneksi = mysqli_connect($this->host, $this->username, $this->password, $this->database);
-        if (mysqli_connect_errno()) {
-            echo "Koneksi database gagal : " . mysqli_connect_errno();
-        } else {
-            // echo "Koneksi database sukses";
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body {
+            background-color: black;
+            color : white;
         }
-    }
-    function tampil_data()
-    {
-        $query = "SELECT a.* , b.* FROM data_peminjam a INNER JOIN jenis_kelamin b ON b.kode_jk = a.jenis_kelamin";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
+    </style>
+</head>
+<body>
+    <?php
+        include "config.php";
+        $db = new Database();
+        if (isset($_GET['id'])) {
+            $kode_peminjam = $_GET['id'];
+            $data_peminjam = $db->kode_peminjam($kode_peminjam);
+        }else {
+            header('Location: tampilkan_data_peminjam.php');
         }
-        return $hasil;
-    }
-    function tampil_data_jenis_kelamin()
-    {
-        $query = "SELECT * FROM jenis_kelamin";
-        $data_jenis_kelamin = mysqli_query($this->koneksi, $query);
-        while ($row_jenis_kelamin = mysqli_fetch_array($data_jenis_kelamin)) {
-            $hasil_jenis_kelamin[] = $row_jenis_kelamin;
-        }
-        return $hasil_jenis_kelamin;
-    }
-    function tambah_data_peminjam($kode_peminjam, $nama_peminjam, $jenis_kelamin, $tanggal_lahir, $alamat, $pekerjaan)
-    {
-        $query = "INSERT INTO data_peminjam VALUES ('' , '$kode_peminjam' , '$nama_peminjam' , '$jenis_kelamin' , '$tanggal_lahir' , '$alamat' , '$pekerjaan' , '0' , 'Null')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function kode_peminjam($kode_peminjam)
-    {
-        $query = "SELECT a.* , b.* FROM data_peminjam a INNER JOIN jenis_kelamin b ON b.kode_jk = a.jenis_kelamin WHERE a.kode_peminjam='$kode_peminjam' ";
-        $data_peminjam = mysqli_query($this->koneksi, $query);
-
-        while ($row_peminjam = mysqli_fetch_assoc($data_peminjam)) {
-            $hasil_peminjam[] = $row_peminjam;
-        }
-        return $hasil_peminjam;
-    }
-    function edit_data_peminjam($kode_peminjam, $nama_peminjam, $jenis_kelamin, $tanggal_lahir, $alamat, $pekerjaan)
-    {
-        $query = "UPDATE data_peminjam SET nama_peminjam = '$nama_peminjam' , jenis_kelamin = '$jenis_kelamin' , tanggal_lahir = '$tanggal_lahir' , alamat = '$alamat' , pekerjaan = '$pekerjaan' WHERE kode_peminjam = '$kode_peminjam' ";
-        mysqli_query($this->koneksi, $query);
-    }
-    function hapus_data_peminjam($kode_peminjam)
-    {
-        $query = "DELETE FROM data_peminjam WHERE kode_peminjam = '$kode_peminjam' ";
-        mysqli_query($this->koneksi, $query);
-    }
-    // pembatas job 15 dan 16
-
-    function tambah_data_jenis_buku($kode_jenis_buku, $nama_jenis_buku)
-    {
-        $query = "INSERT INTO data_jenis_buku VALUES ('' , '$kode_jenis_buku' , '$nama_jenis_buku')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function tampil_data_jenis_buku()
-    {
-        $query = "SELECT * FROM data_jenis_buku";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-    function tambah_data_penerbit($kode_penerbit, $nama_penerbit)
-    {
-        $query = "INSERT INTO data_penerbit VALUES ('' , '$kode_penerbit' , '$nama_penerbit')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function tampil_data_penerbit()
-    {
-        $query = "SELECT * FROM data_penerbit";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-    function tambah_data_pengarang($kode_pengarang, $nama_pengarang)
-    {
-        $query = "INSERT INTO data_pengarang VALUES ('' , '$kode_pengarang' , '$nama_pengarang')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function tampil_data_pengarang()
-    {
-        $query = "SELECT * FROM data_pengarang";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-    function tambah_data_buku($kode_buku , $judul_buku , $kode_pengarang , $kode_jenis_buku , $kode_penerbit , $isbn , $tahun , $deskripsi , $jumlah)
-    {
-        $query = "INSERT INTO data_buku VALUES ('' , '$kode_buku' , '$judul_buku' , '$kode_pengarang' , '$kode_jenis_buku' , '$kode_penerbit' , '$isbn' , '$tahun' , '$deskripsi' , '$jumlah')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function tampil_data_buku()
-    {
-        $query = "SELECT a.* , b.* , c.* , d.* FROM data_buku a
-                    INNER JOIN data_pengarang b ON b.kode_pengarang = a.kode_pengarang
-                    INNER JOIN data_jenis_buku c ON c.kode_jenis_buku = a.kode_jenis_buku
-                    INNER JOIN data_penerbit d ON d.kode_penerbit = a.kode_penerbit
-        ";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-    function tampil_data_peminjam()
-    {
-        $query = "SELECT * FROM data_peminjam";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-    function tambah_peminjaman($kode_buku , $kode_peminjam)
-    {
-        $tanggal_pinjam = date('Y-m-d');
-        $tanggal_kembali = date('Y-m-d' , time() + (60 * 60 * 24 * 7));
-        $query = "INSERT INTO peminjaman VALUES ('' , '$kode_buku' , '$kode_peminjam' , '$tanggal_pinjam' , '$tanggal_kembali' , '1')";
-        mysqli_query($this->koneksi, $query);
-    }
-    function tampil_peminjaman()
-    {
-        $query = "SELECT a.* , b.* , c.* FROM peminjaman a
-                    INNER JOIN data_buku b ON b.kode_buku = a.kode_buku
-                    INNER JOIN data_peminjam c ON c.kode_peminjam = a.kode_peminjam
-        ";
-        $data = mysqli_query($this->koneksi, $query);
-        while ($row = mysqli_fetch_array($data)) {
-            $hasil[] = $row;
-        }
-        return $hasil;
-    }
-}
+    ?>
+    <div class="container p-5">
+    <h3>Edit Data Mahasiswa</h3>
+    <form action="simpan_edit_data_peminjam.php" method="post">
+        <input type="hidden" name="kode_peminjam" value="<?php echo $data_peminjam[0]['kode_peminjam']; ?>">
+        <table class="table table-bordered table-hover table-dark">
+            <tr>
+                <td>Kode Peminjam</td>
+                <td>:</td>
+                <td><?php echo $data_peminjam[0]['kode_peminjam']; ?></td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type="text" name="nama_peminjam" value="<?php echo $data_peminjam[0]['nama_peminjam']; ?>" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td><select name="jenis_kelamin" class="form-select">
+                    <?php
+                        $no = 1;
+                        $kode_jenis_kelamin = $data_peminjam[0]['kode_jk'];
+                        foreach ($db->tampil_data_jenis_kelamin() as $x) {
+                            echo "<option value=" .$x['kode_jk'];
+                            if ($x['kode_jk'] == $kode_jenis_kelamin) {
+                                echo " selected=selected";
+                            }
+                            echo ">" . $x['keterangan_jk'] . "</option>";
+                        }
+                    ?>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>:</td>
+                <td><input type="date" name="tanggal_lahir" value="<?php echo $data_peminjam[0]['tanggal_lahir']; ?>" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><input type="text" name="alamat" value="<?php echo $data_peminjam[0]['alamat']; ?>" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>:</td>
+                <td><input type="text" name="pekerjaan" value="<?php echo $data_peminjam[0]['pekerjaan']; ?>" class="form-control"></td>
+            </tr>
+            <tr>
+                <td colspan="3"><div class="d-grid"><input type="submit" value="SIMPAN" class="btn btn-success"></div></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
